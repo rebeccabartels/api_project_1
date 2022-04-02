@@ -6,19 +6,14 @@ const app = express()
 
 const newspapers = [
     {
-        name: 'mashable',
-        address: 'https://mashable.com/category/tech-industry',
-        base: 'https://mashable.com/tech'
+        name: 'gbhackers',
+        address: 'https://gbhackers.com/',
+        base: 'https://gbhackers.com/'
     },
     {
-        name: 'vpnmentor',
-        address: 'https://www.vpnmentor.com/blog/best-no-log-vpns/',
-        base: 'https://www.vpnmentor.com'
-    },
-    {
-        name: 'pcmag',
-        address: 'https://www.pcmag.com/',
-        base: 'https://www.pcmag.com'
+        name: 'vice',
+        address: 'https://www.vice.com/en/section/tech',
+        base: 'https://www.vice.com/en/'
     },
     {
         name: 'theguardian',
@@ -51,7 +46,7 @@ newspapers.forEach(newspaper => {
 })
 
 app.get('/', (req, res) => {
-    res.json('Welcome to my News API')
+    res.json('Welcome to my Cyber News API')
 })
 
 app.get('/news', (req, res) => {
