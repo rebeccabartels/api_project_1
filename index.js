@@ -280,7 +280,7 @@ const newspapers = [
 ]
 
 const articles = []
-const test = 1
+
 newspapers.forEach(newspaper => {
     axios.get(newspaper.address)
         .then(response => {
