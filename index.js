@@ -145,7 +145,7 @@ const newspapers = [
         address: 'https://davinciforensics.co.za/cybersecurity/articles',
         base: 'https://davinciforensics.co.za'
     },
- {
+    {
         name: 'grahamcluley',
         address: 'https://grahamcluley.com/',
         base: 'https://grahamcluley.com/'
@@ -157,9 +157,10 @@ const newspapers = [
     },
     {
         name: 'lastwatchdog',
-        address: 'https://www.lastwatchdog.com/',
-        base: 'https://www.lastwatchdog.com/'
-    },{
+        address: 'https://www.lastwatchdog.com',
+        base: 'https://www.lastwatchdog.com'
+    },
+    {
         name: 'insidecybersecurity',
         address: 'https://insidecybersecurity.com/',
         base: 'https://insidecybersecurity.com/'
@@ -174,7 +175,7 @@ const newspapers = [
         address: 'https://www.cyberark.com/resources/blog',
         base: 'https://www.cyberark.com'
     },
- {
+    {
         name: 'schneier',
         address: 'https://www.schneier.com/',
         base: 'https://www.schneier.com/'
@@ -188,7 +189,9 @@ const newspapers = [
         name: 'krebonsecurity',
         address: 'https://krebsonsecurity.com/',
         base: 'https://krebsonsecurity.com/'
-    }, {
+    }, 
+    {
+
         name: 'bssi2',
         address: 'https://www.bssi2.com/blog/',
         base: 'https://www.bssi2.com/blog/'
@@ -198,7 +201,7 @@ const newspapers = [
         address: 'https://www.cyberark.com/resources/blog',
         base: 'https://www.cyberark.com'
     },
- {
+    {
         name: 'schneier',
         address: 'https://www.schneier.com/',
         base: 'https://www.schneier.com/'
@@ -212,11 +215,13 @@ const newspapers = [
         name: 'bhconsulting',
         address: 'https://bhconsulting.ie/securitywatchblog/',
         base: 'https://bhconsulting.ie'
-    }, {
+    }, 
+    {
         name: 'eff',
         address: 'https://www.eff.org/deeplinks',
         base: 'https://www.eff.org/deeplinks'
-    }, {
+    }, 
+    {
         name: 'homelandsecuritynews',
         address: 'https://www.homelandsecuritynewswire.com/topics/cybersecurity',
         base: 'https://www.homelandsecuritynewswire.com'
@@ -225,8 +230,8 @@ const newspapers = [
         name: 'itportal',
         address: 'https://www.itproportal.com/security/',
         base: 'https://www.itproportal.com/'
-    },
- {
+    }, 
+    {
         name: 'lawfareblog',
         address: 'https://www.lawfareblog.com/topic/cybersecurity',
         base: 'https://www.lawfareblog.com'
@@ -241,12 +246,12 @@ const newspapers = [
         address: 'https://www.theguardian.com/technology/data-computer-security',
         base: 'https://www.theguardian.com/technology/'
     },
- {
+    {
         name: 'gbhackers',
         address: 'https://gbhackers.com/',
         base: 'https://gbhackers.com/'
     },
- {
+    {
         name: 'vice',
         address: 'https://www.vice.com/en/section/tech',
         base: 'https://www.vice.com/en/'
@@ -317,7 +322,7 @@ app.get('/news/:newspaperId', (req, res) => {
             const $ = cheerio.load(html)
             const specificArticles = []
 
-            $('a:contains("climate")', html).each(function () {
+            $('a:contains("cyber")', html).each(function () {
                 const title = $(this).text()
                 const url = $(this).attr('href')
                 specificArticles.push({
