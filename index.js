@@ -16,11 +16,6 @@ const newspapers = [
         base: 'https://www.vpnmentor.com'
     },
     {
-        name: 'zdnet',
-        address: 'https://www.zdnet.com/',
-        base: 'https://www.zdnet.com'
-    },
-    {
         name: 'pcmag',
         address: 'https://www.pcmag.com/',
         base: 'https://www.pcmag.com'
