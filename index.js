@@ -125,11 +125,7 @@ const newspapers = [
         address: 'https://www.theverge.com/cyber-security',
         base: 'https://www.theverge.com'
     },
-    {
-        name: 'nakedsecrity',
-        address: 'https://nakedsecurity.sophos.com/',
-        base: 'https://nakedsecurity.sophos.com/'
-    },
+
     {
         name: 'jisaoftech',
         address: 'https://www.jisasoftech.com',
@@ -139,11 +135,6 @@ const newspapers = [
         name: 'infosecurity-magazine',
         address: 'https://www.infosecurity-magazine.com',
         base: 'https://www.infosecurity-magazine.com'
-    },
-    {
-        name: 'nakedsecrity',
-        address: 'https://davinciforensics.co.za/cybersecurity/articles',
-        base: 'https://davinciforensics.co.za'
     },
     {
         name: 'grahamcluley',
@@ -166,11 +157,6 @@ const newspapers = [
         base: 'https://insidecybersecurity.com/'
     },
     {
-        name: 'bssi2',
-        address: 'https://www.bssi2.com/blog/',
-        base: 'https://www.bssi2.com/blog/'
-    },
-    {
         name: 'cyberark',
         address: 'https://www.cyberark.com/resources/blog',
         base: 'https://www.cyberark.com'
@@ -179,33 +165,12 @@ const newspapers = [
         name: 'schneier',
         address: 'https://www.schneier.com/',
         base: 'https://www.schneier.com/'
-    },
-    {
-        name: 'cnet',
-        address: 'https://www.cnet.com/tech/services-and-software/cybersecurity/',
-        base: 'https://www.cnet.com/tech/'
     },
     {
         name: 'krebonsecurity',
         address: 'https://krebsonsecurity.com/',
         base: 'https://krebsonsecurity.com/'
     }, 
-    {
-
-        name: 'bssi2',
-        address: 'https://www.bssi2.com/blog/',
-        base: 'https://www.bssi2.com/blog/'
-    },
-    {
-        name: 'cyberark',
-        address: 'https://www.cyberark.com/resources/blog',
-        base: 'https://www.cyberark.com'
-    },
-    {
-        name: 'schneier',
-        address: 'https://www.schneier.com/',
-        base: 'https://www.schneier.com/'
-    },
     {
         name: 'cnet',
         address: 'https://www.cnet.com/tech/services-and-software/cybersecurity/',
@@ -215,11 +180,6 @@ const newspapers = [
         name: 'bhconsulting',
         address: 'https://bhconsulting.ie/securitywatchblog/',
         base: 'https://bhconsulting.ie'
-    }, 
-    {
-        name: 'eff',
-        address: 'https://www.eff.org/deeplinks',
-        base: 'https://www.eff.org/deeplinks'
     }, 
     {
         name: 'homelandsecuritynews',
@@ -257,21 +217,6 @@ const newspapers = [
         base: 'https://www.vice.com/en/'
     },
     {
-        name: 'redscan',
-        address: 'https://www.redscan.com/news/',
-        base: 'https://www.redscan.com/news/'
-    },
-    {
-        name: 'theguardian',
-        address: 'https://www.theguardian.com/technology/data-computer-security',
-        base: 'https://www.theguardian.com/technology/'
-    },
-    {
-        name: 'rapid7',
-        address: 'https://www.rapid7.com/blog/',
-        base: 'https://www.rapid7.com'
-    },
-    {
         name: 'theguardian',
         address: 'https://www.theguardian.com/technology/data-computer-security',
         base: 'https://www.theguardian.com/technology/'
@@ -280,7 +225,7 @@ const newspapers = [
 ]
 
 const articles = []
-const test = 1
+
 newspapers.forEach(newspaper => {
     axios.get(newspaper.address)
         .then(response => {
@@ -302,7 +247,7 @@ newspapers.forEach(newspaper => {
 })
 
 app.get('/', (req, res) => {
-    res.json('Welcome to my News API')
+    res.json('Welcome to my Cyber News API')
 })
 
 app.get('/news', (req, res) => {
